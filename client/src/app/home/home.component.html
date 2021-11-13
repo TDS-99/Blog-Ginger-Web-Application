@@ -1,0 +1,23 @@
+<div class="container-box">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row row-cols-1 row-cols-md-2">
+          <div class="col mb-4" *ngFor="let user of this.users">
+            <div class="card cardsize">
+              <img src="{{user.imageSrc}}" class="card-img-top img-fluid" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a (click)="getBlogById(user)">{{user.title}} </a>
+                </h5>
+                <p class="card-text card-story">{{user.story}}</p>
+              </div>
+            </div>
+            <button type="button" class="btn btn-light card-button" (click)="getBlogById(user)">View</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>

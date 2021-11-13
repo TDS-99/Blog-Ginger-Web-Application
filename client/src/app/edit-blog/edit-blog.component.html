@@ -1,0 +1,22 @@
+<form class="blog " [formGroup]="addStory" (ngSubmit)="onUpdate()" >
+  <div class="form-group title ">
+    
+    <input type="Title" formControlName="Title" class="form-control " id="Title" placeholder="Title">
+  </div>
+  <div class="input-group ">
+    </div>
+    <div class="custom-file">
+      <img [src]='imageUrl' style="width:800px;height: 200px;" *ngIf="imageUrl">
+      <img src="{{user.imageSrc}}" class="card-img-top img-fluid" alt="..." *ngIf="!imageUrl"> 
+        <input style="display: none;" accept=".png, .jpg, .jpeg" type="file" formControlName="ImageFile" class="form-control " id="imageFile" (change)="handleFileInput($event)" #fileInput>
+        <a class="btn addbtn" (click)="fileInput.click()"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+          <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg></a>
+    </div>
+  <div class="form-group story1">
+    <textarea class="form-control story " formControlName="Story" id="storyid" placeholder="Tell your story…"></textarea>
+  </div>
+  <button class="btn btn-outline-dark" type="submit" >Add Story</button>
+</form>
+

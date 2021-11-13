@@ -1,0 +1,14 @@
+.container-box {
+    width: 100%;
+}
+.card-story{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.card-button {
+    width: 100%;
+}
+.card-img-top {
+    height: 300px;
+}

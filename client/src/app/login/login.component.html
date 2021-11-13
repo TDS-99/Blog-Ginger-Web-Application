@@ -1,0 +1,40 @@
+<div class="ng-container">
+<div class="row">
+  <div class="col-md-12 col-sm-12 col-12 navtop text-center">
+   
+    <h1 class="display-4">Welcome Back</h1>   
+    
+    <h3 *ngIf='message'>
+     {{message}}
+    </h3>
+    
+     <div *ngIf="invalidLogin" class="fadeIn first">
+        <div class="txt-danger">Invalied user or password. Please try again</div>
+      </div>
+      <form class="formmob text-center" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group username1">
+     
+        <input  type="text" class="form-control" formControlName="username" 
+        id="username"  autocomplete="off" placeholder="User Name">
+        <div class="error"
+         *ngIf="loginForm.controls['username'].hasError('required') 
+        && loginForm.controls['username'].touched"></div>
+      </div>
+      <div class="fadeIn first username1">
+        
+        <input type="password" class="form-control"
+         formControlName="password" id="pwd" 
+        autocomplete="off" placeholder="Password">
+        <div class="error"
+         *ngIf="loginForm.controls['password'].hasError('required') 
+        && loginForm.controls['password'].touched"></div>
+      </div>
+      <div class="button1">
+      <button class="btn btn-outline-dark text-center" [disabled]="loginForm.invalid">Login</button>
+      <button [routerLink]="['/register']" class="btn btn-outline-dark  text-center ">Register</button>
+      </div>
+    </form>
+    <div class="space"></div>
+  </div>
+</div>
+</div>

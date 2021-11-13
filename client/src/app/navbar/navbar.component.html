@@ -1,0 +1,18 @@
+<div class="container-box">
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm ">
+    <a href="blog" class="my-0 mr-md-auto font-weight-normal logo"><img [src]="Logo" alt=""></a>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <div class="dropdown" *ngIf="(LoginStatus$ | async) as LoginStatus">
+        <button class="dropbtn"><img class="navimg rounded-circle" [src]="imageUrl"  alt="" *ngIf="!(ImageStatus$ | async) as imageStatus"><img class="navimg rounded-circle" src="{{user.imageSrc}}"  alt="" *ngIf="(ImageStatus$ | async) as imageStatus"></button>
+        <div class="dropdown-content">
+          <a href="newpost">New story</a>
+          <a href="stories">Stories</a>
+          <a href="profile">Profile</a>
+          <a class="" type="button" (click)="logOut()" *ngIf="(LoginStatus$ | async) as LoginStatus">Logout</a>
+        </div>
+      </div>
+      <a class="p-2 text-dark" routerLink="/login"  *ngIf="!(LoginStatus$ | async) as LoginStatus" >Sign in</a>
+    </nav>
+    <a class="btn btn-outline-dark" routerLink="/register" *ngIf="!(LoginStatus$ | async) as LoginStatus">Get Started</a>
+  </div>
+</div>

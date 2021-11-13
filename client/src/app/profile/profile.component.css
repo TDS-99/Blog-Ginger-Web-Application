@@ -1,0 +1,25 @@
+.img {
+    margin-top: 100px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    font-size: 5px;
+    border-radius: 10px;
+
+}
+.inputimg {
+    font-size: 13px;
+    display: block;
+    margin-left: 45%;
+    margin-bottom: 5px;
+}
+.sub {
+    display: block;
+    margin-left: 45%;
+}
+.name {
+    margin-top: 10px;
+}
+.navimg {
+    border-radius: 50%;
+}

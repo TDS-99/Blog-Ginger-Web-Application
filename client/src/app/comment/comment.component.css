@@ -1,0 +1,16 @@
+.comment {
+    color: #292929;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+.comment-item {
+    background-color: rgb(248, 246, 246);
+    border-radius: 15px 50px 30px;
+}
+.comment-p {
+    margin-left: 4px;
+}
+.comment-head {
+    margin-top: 10px;
+}

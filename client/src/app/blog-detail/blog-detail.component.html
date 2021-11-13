@@ -1,0 +1,23 @@
+<div class="container-box ">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12" class="title">
+            <h2>{{user.title}}</h2>
+            <img src="{{user.imageSrc}}" class="card-img-top img-fluid" alt="..."> 
+        </div>
+        <div class="col-lg-12" id="story">
+            <p>{{user.story}}</p>
+        </div>
+        <div class="col-lg-12" >
+            <form class="comment " [formGroup]="addComment" (ngSubmit)="onSubmit()" >
+            <div class="form-group" >
+                <textarea class="form-control story " formControlName="UserComment" id="Comment" placeholder="Write your Comment here..."></textarea>
+              </div>
+              <button class="btn btn-outline-dark" type="submit" >Comment</button>
+            </form>
+        </div>
+        <app-comment></app-comment>
+    </div>
+</div>
+</div>
+
